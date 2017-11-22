@@ -18,21 +18,22 @@ window.onload = function () {
         isIos = false;
     }
     var popUpAlert = document.createElement("iframe");
-    //弹出QQ群官方链接地址
-    popUpAlert.src="http://shang.qq.com/wpa/qunwpa?idkey=3f52a882a0e039420c76d1c5aaafd8c735bdfcdf6fba54903042092e002a2f35";
-    popUpAlert.style.display = "none";
-    popUpAlert.width="0";
-    popUpAlert.height="0";
-    document.body.appendChild(popUpAlert);
     if(isIos){
-        // if(history.pushState) {
-        //     history.pushState({},"t","#");
-        // }
+        if(history.pushState) {
+            history.pushState({},"t","#");
+        }
         if(browser.indexOf("Safari") > -1) {
             popUpAlert.src = "mqqapi://card/show_pslcard?src_type=internal&version=1&uin=" + rawuin +"&card_type=group&source=qrcode";
         } else {
             popUpAlert.src = "http://shang.qq.com/wpa/qunwpa?idkey=3f52a882a0e039420c76d1c5aaafd8c735bdfcdf6fba54903042092e002a2f35";
         }
+    } else {
+        //弹出QQ群官方链接地址
+        popUpAlert.src="http://shang.qq.com/wpa/qunwpa?idkey=3f52a882a0e039420c76d1c5aaafd8c735bdfcdf6fba54903042092e002a2f35";
+        popUpAlert.style.display = "none";
+        popUpAlert.width="0";
+        popUpAlert.height="0";
+        document.body.appendChild(popUpAlert);
     }
     // getSize();
     // window.addEventListener('resize',getSize);
