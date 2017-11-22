@@ -1,40 +1,138 @@
 ﻿
 window.onload = function () {
-
     debugger;
-    var browser = navigator.userAgent;
-    var isIos = false;
+    var type = 1;
+    // var sid = 2;
     var rawuin = 521129760;
-    if(browser.indexOf("Android")>-1){
-        isIos = false;
+    var qsig = "http://shang.qq.com/wpa/qunwpa?idkey=3f52a882a0e039420c76d1c5aaafd8c735bdfcdf6fba54903042092e002a2f35";
+
+    var QQApi = {
+        openURL: function(url){
+            var i = document.createElement('iframe');
+            i.style.display = 'none';
+            i.onload = function() { i.parentNode.removeChild(i); };
+            i.src = url;
+            document.body.appendChild(i);
+
+            var returnValue = QQApi.__RETURN_VALUE;
+            QQApi.__RETURN_VALUE = undefined;
+            return returnValue;
+        },
+
+        isAppInstalled: function(scheme) {
+            var parameters = {'scheme':scheme};
+            var r = QQApi.openURL('jsbridge://app/isInstalled_?p=' + encodeURIComponent(JSON.stringify(parameters)));
+            return r ? r.result : null;
+        },
+
+        isQQWebView: function(){
+            return QQApi.isAppInstalled('mqq') == true;
+        },
+        __RETURN_VALUE: undefined
+    };
+    var usa = navigator.userAgent;
+    var p;
+    // var mobile_q_jump = {
+    //     android:"https://play.google.com/store/apps/details?id=com.tencent.mobileqq",
+    //     ios:"itms-apps://itunes.apple.com/cn/app/qq-2011/id444934666?mt=8",
+    //     winphone:"http://www.windowsphone.com/zh-cn/store/app/qq/b45f0a5f-13d8-422b-9be5-c750af531762",
+    //     pc:"http://mobile.qq.com/index.html"
+    // };
+    var isMQ = 0;
+    if(typeof type == "undefined") type = 1;
+
+    if(usa.indexOf("Android")>-1){
+        p = "android";
     }
-    else if(browser.indexOf("iPhone")>-1 || browser.indexOf("iPad")>-1 || browser.indexOf("iPod")>-1){
-        isIos = true;
+    else if(usa.indexOf("iPhone")>-1 || usa.indexOf("iPad")>-1 || usa.indexOf("iPod")>-1){
+        p = "ios";
     }
-    else if(browser.indexOf("Windows Phone") > -1 || browser.indexOf("WPDesktop") > -1){
-        isIos = true;
+    else if(usa.indexOf("Windows Phone") > -1 || usa.indexOf("WPDesktop") > -1){
+        p = "winphone";
     }
     else {
-        isIos = false;
+        p = "pc";
     }
-    var popUpAlert = document.createElement("iframe");
-    if(isIos){
-        if(history.pushState) {
+    if(p == "ios"){
+        //防止循环
+        if(history.pushState)
             history.pushState({},"t","#");
+        isMQ = QQApi.isQQWebView();
+
+        if (!isMQ){
+            var sc = document.createElement("script");
+            sc.src = "http://__.qq.com/api/qqapi.js";
+            sc.onload = function(){
+                if(window['iOSQQApi']){
+                    isMQ =iOSQQApi.device.isMobileQQ();
+                }
+            };
+            document.body.appendChild(sc);
         }
-        if(browser.indexOf("Safari") > -1) {
-            popUpAlert.src = "mqqapi://card/show_pslcard?src_type=internal&version=1&uin=" + rawuin +"&card_type=group&source=qrcode";
-        } else {
-            popUpAlert.src = "http://shang.qq.com/wpa/qunwpa?idkey=3f52a882a0e039420c76d1c5aaafd8c735bdfcdf6fba54903042092e002a2f35";
-        }
-    } else {
-        //弹出QQ群官方链接地址
-        popUpAlert.src="http://shang.qq.com/wpa/qunwpa?idkey=3f52a882a0e039420c76d1c5aaafd8c735bdfcdf6fba54903042092e002a2f35";
-        popUpAlert.style.display = "none";
-        popUpAlert.width="0";
-        popUpAlert.height="0";
-        document.body.appendChild(popUpAlert);
     }
+    // else if(p == "pc" && qsig != "undefined"){
+    //     window.open(qsig,"_blank");
+    // }
+    if(type == 1){//手Q
+        // var isSuccess = true;
+        var f = document.createElement("iframe");
+        f.style.display = "none";
+        document.body.appendChild(f);
+        // f.onload = function(){
+        //     isSuccess = false;
+        // };
+
+        if(p == "ios"){//ios并且为群名片
+            f.src = "mqqapi://card/show_pslcard?src_type=internal&version=1&uin="+ rawuin +"&card_type=group&source=qrcode";
+        } else {
+            f.src = qsig;
+        }
+        // //群
+        // if(sid == 2){
+        //     document.title = "申请加入QQ群";
+        // }
+        // var now = Date.now();
+        // setTimeout( function(){
+        //     if((p == "ios" && !isMQ && Date.now() - now < 2000) || (p == "android" && !isSuccess) || ((p == "winphone" && Date.now() - now < 2000))){
+        //         var jumpUrl = mobile_q_jump[p];
+        //         if(jumpUrl) window.open(jumpUrl,"_blank");
+        //     }
+        // } , 1500);
+    }
+    // debugger;
+    // var browser = navigator.userAgent;
+    // var isIos = false;
+    // var rawuin = 521129760;
+    // if(browser.indexOf("Android")>-1){
+    //     isIos = false;
+    // }
+    // else if(browser.indexOf("iPhone")>-1 || browser.indexOf("iPad")>-1 || browser.indexOf("iPod")>-1){
+    //     isIos = true;
+    // }
+    // else if(browser.indexOf("Windows Phone") > -1 || browser.indexOf("WPDesktop") > -1){
+    //     isIos = true;
+    // }
+    // else {
+    //     isIos = false;
+    // }
+    // var popUpAlert = document.createElement("iframe");
+    // popUpAlert.style.display = "none";
+    // popUpAlert.width="0";
+    // popUpAlert.height="0";
+    // document.body.appendChild(popUpAlert);
+    // if(isIos){
+    //     if(history.pushState) {
+    //         history.pushState({},"t","#");
+    //     }
+    //     if(browser.indexOf("Safari") > -1) {
+    //         popUpAlert.src = "mqqapi://card/show_pslcard?src_type=internal&version=1&uin=" + rawuin +"&card_type=group&source=qrcode";
+    //     } else {
+    //         popUpAlert.src = "http://shang.qq.com/wpa/qunwpa?idkey=3f52a882a0e039420c76d1c5aaafd8c735bdfcdf6fba54903042092e002a2f35";
+    //     }
+    // } else {
+    //     //弹出QQ群官方链接地址
+    //     popUpAlert.src="http://shang.qq.com/wpa/qunwpa?idkey=3f52a882a0e039420c76d1c5aaafd8c735bdfcdf6fba54903042092e002a2f35";
+    // }
     // getSize();
     // window.addEventListener('resize',getSize);
 };
