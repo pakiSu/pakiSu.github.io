@@ -1,7 +1,7 @@
 ﻿
 window.onload = function () {
     var type = 1;
-    var qqAccount = 521129760;
+    var qqAccount = 47317889;
     var qqGroup = "http://shang.qq.com/wpa/qunwpa?idkey=3f52a882a0e039420c76d1c5aaafd8c735bdfcdf6fba54903042092e002a2f35";
     var iosGroup = "mqqapi://card/show_pslcard?src_type=internal&version=1&uin="+ qqAccount +"&card_type=group&source=qrcode";
     var usa = navigator.userAgent;
