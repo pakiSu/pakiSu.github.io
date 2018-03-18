@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+      <title>Copy Text</title>
+  </head>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    html {
+      box-sizing: border-box;
+    }
+    *,*:after,*:before {
+      box-sizing: inherit;
+    }
+    body {
+      font-size: 62.5% !important;
+    }
+    img {
+      width: 100%;
+    }
+    .copy {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: #FCBD3E;
+      color: #000000;
+      text-align: center;
+    }
+    .copy1 {
+      color: #FF5702;
+    }
+    #qq {
+      font-size: 3em;
+      color: #FFFFFF;
+    }
+    .btn {
+      font-size: 2.4em;
+      background-color: #FCBD3E;
+      color: #FFFFFF;
+      border: none;
+      padding: 8px;
+    }
+
+  </style>
+  <body>
+    <img src="main.png">
+    <div class="copy">
+      <div class="copy1">
+        <span id="qq"></span>
+        <input type="button"  class="btn" onclick="copyText()" value="点击复制QQ" />
+      </div>
+    </div>
+    <script type="text/javascript" src="copy.js"></script>
+  </body>
+</html>
