@@ -1,0 +1,248 @@
+
+* {
+  padding: 0;
+  margin: 0;
+}
+html {
+  box-sizing: border-box;
+  font-size: 12px
+}
+*,*:after,*:before {
+  box-sizing: inherit;
+}
+body {
+  font-size: 62.5% !important;
+  max-width: 62.5rem;
+  font-family: "microsoft yahei";
+  margin: 0 auto;
+  position: relative;
+  padding-bottom: 5rem;
+}
+
+.header img {
+  display: block;
+  width: 100%;
+}
+
+.middle {
+  position: absolute;
+  width: 100%;
+  max-width: 62.5rem;
+}
+
+.middle img {
+  display: block;
+  margin: 0 auto;
+}
+
+.open {
+  -moz-animation: change linear 1.5s infinite;
+  -webkit-animation: change linear 1.5s infinite;
+  -o-animation: change linear 1.5s infinite;
+}
+
+@keyframes change {
+  0% {
+    transform: scale(1,1);
+  }
+
+  50% {
+    transform: scale(0.8,0.8);
+  }
+  100% {
+    transform: scale(1,1);
+  }
+}
+
+.fixed {
+  position: fixed;
+  right: 0;
+  bottom: 33.3rem;
+}
+
+
+.fixed img{
+  animation: tada 2s linear infinite;
+  -webkit-animation: tada 2s linear infinite;
+  -moz-animation: tada 2s linear infinite;
+  -o-animation: tada 2s linear infinite;
+}
+
+@keyframes tada {
+  0% {
+    transform: scale(1);
+  }
+  10%, 20% {
+    transform: scale(0.9) rotate(-3deg);
+  }
+  30%, 50%, 70%, 90% {
+    transform: scale(1.1) rotate(3deg);
+  }
+  40%, 60%, 80% {
+    transform: scale(1.1) rotate(-3deg);
+  }
+}
+
+.close {
+  position: absolute;
+  margin-left: 10rem;
+  z-index: 100;
+}
+
+.shelter_class {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background: rgba(0,0,0,0.1);
+  top:0;
+  left:0;
+}
+
+.dialog{
+  display: none;
+  position: fixed;
+  z-index: 3;
+  width: 30rem;
+  min-height: 25rem;
+  padding: 0.83rem;
+  top: 10%;
+  left: 30%;
+}
+
+.bing-wx {
+  position: absolute;
+  z-index: 5;
+}
+
+.dialog_close {
+  position: absolute;
+  z-index: 6;
+  right: -0%;
+  top: -7%;
+  width: 4rem;
+  height: 4rem;
+}
+
+.dialog_message {
+  position: absolute;
+  z-index: 10;
+  width: 30rem;
+  top: 110%;
+  border: 0.2rem solid #ffe12e;
+  border-radius: 0.5rem;
+  background: #c73133;
+}
+
+.dialog_message p,button {
+  text-align: center;
+  font-size: 1.65rem;
+  padding: 0.5rem;
+  color: #FFFFFF;
+}
+.wx_copy {
+  color: #FFF71C;
+  margin: 0 auto;
+  display: flex;
+  font-size: 3rem;
+  background-color: #c73133;
+  padding: 1rem 3rem;
+  border: 0 solid #c73133;
+}
+
+.wx_a {
+  color: #FFF71C;
+  cursor: pointer;
+}
+
+.title {
+  position: relative;
+  width: 100%;
+  font-size: 3.5rem;
+  line-height: 7.75rem;
+  margin-top: 9.1rem;
+  text-align: center;
+  font-weight: bold;
+}
+.title p {
+  position: absolute;
+  top: 0;
+  left: 20%;
+}
+
+.table-header {
+  position: absolute;
+  margin-top: 2.5rem;
+  margin-left: -0.75rem;
+}
+
+.table-information {
+  max-width: 56rem;
+  height: 38rem;;
+  margin: 4rem auto 0 auto;
+  border-radius: 2rem;
+  box-shadow: 0 0 4rem #cccccc;
+}
+
+table {
+  margin-top: 8rem;
+  width: 100%;
+  max-width: 56rem;
+  position: absolute;
+}
+
+tbody {
+  display: table-row-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+
+tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+}
+
+
+table td {
+  color: #696767;
+  text-align: center;
+  font-size: 25px;
+  line-height: 63px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.clear {
+  clear: both;
+}
+
+.jump_two {
+  text-align: center;
+  padding: 5rem 0;
+  animation: egg_two .7s linear infinite alternate;
+  -ms-animation: egg_two .6s linear infinite alternate;
+  -moz-animation: egg_two .6s linear infinite alternate;
+  -webkit-animation: egg_two .6s linear infinite alternate;
+  -o-animation: egg_two .6s linear infinite alternate;
+}
+
+@keyframes  egg_two{
+  0% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+  100% {
+    -webkit-transform: scale(.8, .8);
+    transform: scale(.8, .8);
+  }
+}
+
+.footer {
+  padding: 5rem 0;
+}
+.footer p {
+  font-size: 2rem;
+  text-align: center;
+  line-height: 3rem;
+}
