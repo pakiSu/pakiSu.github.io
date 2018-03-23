@@ -4,20 +4,22 @@ var shelterClose = document.getElementById('shelter_close'),
   dialogClose = document.getElementById('dialog_close'),
   openPop = document.getElementById('open_pop'),
   fixedPop  = document.getElementById('fixed_pop'),
-  dialogPop = document.getElementById('dialog_pop');
-
+  dialogPop = document.getElementById('dialog_pop'),
+  jumpPop = document.getElementById('jump_pop');
 //define copy wx number variable
 var wxArray = ['110','111','112'];
 var defaultIndex = 0;
 var switchSecond = 5;
 var isFirst = false;
 var wxElement = document.getElementById('wx');
+var article = document.getElementById('article');
 
 var int = window.setInterval(wxSwitch,1000*switchSecond);
 
 //initial load method
 window.onload = (function () {
   wxElement.innerHTML = wxArray[defaultIndex];
+  article.innerHTML = wxArray[defaultIndex];
 });
 
 //pop up dialog
@@ -29,9 +31,13 @@ openPop.onclick = function () {
   ShowHide(true,shelterClose,dialogPop);
 };
 
+jumpPop.onclick = function () {
+  ShowHide(true,shelterClose,dialogPop);
+};
+
 //close dialog
 function closeFixed() {
-  var fixed = doc.getElementById('fixed_id');
+  var fixed = document.getElementById('fixed_id');
   fixed.style.display = 'none';
 }
 
@@ -56,7 +62,7 @@ function ShowHide(Boolean,item1,item2) {
 
 
 //this method order to copy current show wx number
-function copyText() {
+function copyText(isWx) {
   var textArea = document.createElement('textarea');
   textArea.style.top = 0;
   textArea.style.left = 0;
@@ -67,7 +73,7 @@ function copyText() {
   textArea.style.outline = 'none';
   textArea.style.boxShadow = 'none';
   textArea.style.background = 'transparent';
-  textArea.innerHTML = wxElement.innerHTML;
+  textArea.innerHTML = isWx? article.innerHTML: wxElement.innerHTML;
   document.body.appendChild(textArea);
   textArea.select();
   try {
@@ -87,6 +93,7 @@ function wxSwitch() {
     defaultIndex --;
   }
   wxElement.innerHTML = wxArray[defaultIndex];
+  article.innerHTML = wxArray[defaultIndex];
   if(defaultIndex === wxArray.length -1) {
     defaultIndex = 0;
     isFirst = true;

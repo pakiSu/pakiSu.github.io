@@ -38,14 +38,14 @@
     <img class="bing-wx" src="picture/bing-wx.png">
     <div class="dialog_message">
       <p>添加微信好礼送到手</p>
-      <button id="wx" class="wx_copy" onclick="copyText()">313213</button>
-      <p>↑点击即可复制微信号，然后<a class="wx_a" href="weixin://">点击进入微信</a>，添加为好友↑</p>
+      <button id="wx" class="wx_copy" onclick="copyText(false)">313213</button>
+      <p>↑点击微信号即可复制,或者<a class="wx_a" onclick="copyText(false)">点击按钮复制微信号</a>↑</p>
     </div>
   </div>
 
   <div class="title">
     <img src="picture/c1_04.jpg">
-    <p><span class="yue">1</span>月股票战绩 真实可查</p>
+    <p><span class="yue">3</span>月股票战绩 真实可查</p>
   </div>
 
   <div class="table-information">
@@ -53,47 +53,47 @@
       <img src="picture/c1_07.png"></div>
     <table class="tab" cellspacing="0" cellpadding="0" border="0">
       <tbody>
-      <tr>
-        <td>名称</td>
-        <td>43</td>
-        <td>9.75</td>
-        <td>13.93</td>
-        <td>42.90%</td>
-      </tr>
-      <tr>
-        <td>名称</td>
-        <td>43</td>
-        <td>30.24</td>
-        <td>49.83</td>
-        <td>64.80%</td>
-      </tr>
-      <tr>
-        <td>名称</td>
-        <td>43</td>
-        <td>16.70</td>
-        <td>21.74</td>
-        <td>30.20%</td>
-      </tr>
-      <tr>
-        <td>名称</td>
-        <td>43</td>
-        <td>35.83</td>
-        <td>52.38</td>
-        <td>46.20%</td>
-      </tr>
-      <tr>
-        <td>名称</td>
-        <td>234</td>
-        <td>37.85</td>
-        <td>48.90</td>
-        <td>29.21%</td>
-      </tr>
+        <tr>
+          <td>荣盛发展</td>
+          <td>002146</td>
+          <td>9.75</td>
+          <td>13.93</td>
+          <td>42.90%</td>
+        </tr>
+        <tr>
+          <td>新晨科技</td>
+          <td>300542</td>
+          <td>30.24</td>
+          <td>49.83</td>
+          <td>64.80%</td>
+        </tr>
+        <tr>
+          <td>广东骏亚</td>
+          <td>603386</td>
+          <td>16.70</td>
+          <td>21.74</td>
+          <td>30.20%</td>
+        </tr>
+        <tr>
+          <td>宣亚国际</td>
+          <td>300612</td>
+          <td>35.83</td>
+          <td>52.38</td>
+          <td>46.20%</td>
+        </tr>
+        <tr>
+          <td>汇金科技</td>
+          <td>300561</td>
+          <td>37.85</td>
+          <td>48.90</td>
+          <td>29.21%</td>
+        </tr>
       </tbody>
     </table>
     <div class="clear"></div>
   </div>
 
-  <div class="jump_two" id="">
+  <div class="jump_two" id="jump_pop">
     <img src="picture/bnt2.jpg">
   </div>
 
@@ -102,8 +102,16 @@
     <p>从事证券投资或期货交易，请通过合法证券期货经营机构进行。</p>
     <p>合法机构名单可到中国证监会网站（www.csrc.gov.cn）查询</p>
     <p>公司：上海证券之星综合研究有限公司广东分公司</p>
-    <p><a href="">关于我们</a></p>
-    <p><a href="">联系我们</a></p>
+  </div>
+
+  <div class="footer2">
+    <div>
+      <img src="picture/1.gif">
+      <div class="foot">
+        &nbsp;微信:&nbsp; <strong id="article">110</strong>
+        <button onclick="copyText(true)">点击复制微信</button>（长按复制微信号）
+      </div>
+    </div>
   </div>
 
   <script type="text/javascript" src="dialogs.js"></script>

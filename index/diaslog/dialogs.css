@@ -57,7 +57,7 @@ body {
 .fixed {
   position: fixed;
   right: 0;
-  bottom: 33.3rem;
+  top: 10%;
 }
 
 
@@ -142,6 +142,7 @@ body {
   color: #FFFFFF;
 }
 .wx_copy {
+  cursor: pointer;
   color: #FFF71C;
   margin: 0 auto;
   display: flex;
@@ -151,10 +152,19 @@ body {
   border: 0 solid #c73133;
 }
 
+.wx_copy:hover {
+  color: royalblue;
+}
+
 .wx_a {
   color: #FFF71C;
   cursor: pointer;
 }
+
+.wx_a:hover {
+  color: royalblue;
+}
+
 
 .title {
   position: relative;
@@ -213,6 +223,11 @@ table td {
   border-bottom: 1px solid #e8e8e8;
 }
 
+table td:nth-child(5n) {
+  color: #ff0000;
+  font-weight: bold;
+}
+
 .clear {
   clear: both;
 }
@@ -240,9 +255,48 @@ table td {
 
 .footer {
   padding: 5rem 0;
+  margin-bottom: 2rem;
 }
 .footer p {
   font-size: 2rem;
   text-align: center;
   line-height: 3rem;
+}
+
+.footer2 {
+  background-color: #fff;
+  border-top: 0.1rem solid #ccc;
+  bottom: 0;
+  padding-top: 0.5rem;
+  position: fixed;
+  width: 100%;
+  max-width: 62.5rem;
+}
+
+.footer2 img{
+  width: 6rem;
+  height: 6rem;
+  float: left;
+  margin-top: -0.42rem;
+}
+.footer2 .foot {
+  font-size: 2rem;
+  padding-top: 1rem;
+}
+.footer2 button {
+  text-rendering: auto;
+  color: initial;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+  margin: 0;
+}
+
+.footer2 button:hover {
+  background: #c73133;
+  color: #FFFFFF;
 }
