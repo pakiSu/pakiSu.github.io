@@ -5,7 +5,6 @@ var shelterClose = document.getElementById('shelter_close'),
   openPop = document.getElementById('open_pop'),
   fixedPop  = document.getElementById('fixed_pop'),
   dialogPop = document.getElementById('dialog_pop'),
-  articlePop = document.getElementById('article-pop'),
   jumpPop = document.getElementById('jump_pop');
 //define copy wx number variable
 var wxArray = ['110','111','112'];
@@ -24,11 +23,6 @@ window.onload = (function () {
 });
 
 //pop up dialog
-// articlePop.onclick = function () {
-//   copyText(true);
-// };
-
-
 fixedPop.onclick = function () {
   ShowHide(true,shelterClose,dialogPop);
 };
@@ -66,9 +60,9 @@ function ShowHide(Boolean,item1,item2) {
   }
 }
 
-function copyArticle(){
+function copyArticle(id){
   const range = document.createRange();
-  range.selectNode(document.getElementById('article'));
+  range.selectNode(document.getElementById(id));
 
   const selection = window.getSelection();
   if(selection.rangeCount > 0) selection.removeAllRanges();
@@ -77,34 +71,9 @@ function copyArticle(){
   document.execCommand('copy');alert("已复制好，可贴粘。");
 }
 
-document.getElementById('copy').addEventListener('click', copyArticle, false);
-
+// document.getElementById('copy').addEventListener('click', copyArticle, false);
 
 //this method order to copy current show wx number
-function copyText(isWx) {
-  var textArea = document.createElement('textarea');
-  textArea.style.top = 0;
-  textArea.style.left = 0;
-  textArea.style.width = '2em';
-  textArea.style.height = '2em';
-  textArea.style.padding = 0;
-  textArea.style.border = 'none';
-  textArea.style.outline = 'none';
-  textArea.style.boxShadow = 'none';
-  textArea.style.background = 'transparent';
-  textArea.innerHTML = isWx? article.innerHTML:wxElement.innerHTML;
-  document.body.appendChild(textArea);
-  textArea.select();
-  try {
-    var isSuccessful = document.execCommand('copy',false,null);
-    console.log('copy successful:' + isSuccessful);
-  } catch (err) {
-    console.log('failed');
-  }
-  document.body.removeChild(textArea);
-}
-
-
 function wxSwitch() {
   defaultIndex ++;
   if(isFirst) {
