@@ -128,6 +128,15 @@ body {
   height: 40px;
 }
 
+.wx_png {
+  width: 165px;
+  height: 165px;
+  position: absolute;
+  z-index: 6;
+  right: 55px;
+  top: 45px;
+}
+
 .dialog_message {
   position: fixed;
   z-index: 15;
