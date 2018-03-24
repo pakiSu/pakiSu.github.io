@@ -5,18 +5,17 @@
 }
 html {
   box-sizing: border-box;
-  font-size: 12px
 }
 *,*:after,*:before {
   box-sizing: inherit;
 }
 body {
   font-size: 62.5% !important;
-  max-width: 62.5rem;
+  max-width: 800px;
   font-family: "microsoft yahei";
   margin: 0 auto;
   position: relative;
-  padding-bottom: 5rem;
+  padding-bottom: 40px;
 }
 
 .header img {
@@ -27,7 +26,7 @@ body {
 .middle {
   position: absolute;
   width: 100%;
-  max-width: 62.5rem;
+  max-width: 750px
 }
 
 .middle img {
@@ -36,6 +35,7 @@ body {
 }
 
 .open {
+  width: 50%;
   -moz-animation: change linear 1.5s infinite;
   -webkit-animation: change linear 1.5s infinite;
   -o-animation: change linear 1.5s infinite;
@@ -87,7 +87,7 @@ body {
   width: 35px;
   height: 35px;
   position: absolute;
-  margin-left: 10rem;
+  margin-left: 120px;
   z-index: 100;
 }
 
@@ -106,42 +106,42 @@ body {
   display: none;
   position: fixed;
   z-index: 3;
-  width: 37.5rem;
-  min-height: 25rem;
-  padding: 0.83rem;
-  top: 10%;
-  left: 30%;
+  width: 300px;
+  min-height: 300px;
+  padding: 10px;
+  top: 20%;
+  left: 10%;
 }
 
 .bing-wx {
   position: absolute;
   z-index: 5;
-  width: 37.5rem;
+  width: 300px;
 }
 
 .dialog_close {
   position: absolute;
   z-index: 6;
-  right: 0.83rem;
-  top: -6%;
-  width: 4rem;
-  height: 4rem;
+  right: 0;
+  top: -10px;
+  width: 40px;
+  height: 40px;
 }
 
 .dialog_message {
-  position: absolute;
-  z-index: 10;
-  width: 37.5rem;
-  top: 125%;
-  border: 0.2rem solid #ffe12e;
-  border-radius: 0.5rem;
+  position: fixed;
+  z-index: 15;
+  width: 300px;
+  top: 63%;
+  border: 1px solid #ffe12e;
+  border-radius: 6px;
   background: #c73133;
 }
 
 .dialog_message p,button {
   text-align: center;
-  font-size: 2rem;
-  padding: 0.5rem;
+  font-size: 1.75em;
+  padding: 6px;
   color: #FFFFFF;
 }
 .wx_copy {
@@ -149,9 +149,9 @@ body {
   color: #FFF71C;
   margin: 0 auto;
   display: flex;
-  font-size: 3rem;
+  font-size: 2.5em;
   background-color: #c73133;
-  padding: 1rem 3rem;
+  padding: 12px 36px;
   border: 0 solid #c73133;
 }
 
@@ -172,36 +172,42 @@ body {
 .title {
   position: relative;
   width: 100%;
-  font-size: 3.5rem;
-  line-height: 7.75rem;
-  margin-top: 9.1rem;
+  font-size: 2em;
+  margin: 36px auto;
   text-align: center;
   font-weight: bold;
 }
+.title img {
+  width: 100%;
+}
 .title p {
+  padding: 8px;
   position: absolute;
   top: 0;
   left: 20%;
 }
 
 .table-header {
+  width: 92%;
   position: absolute;
-  margin-top: 2.5rem;
-  margin-left: -0.75rem;
+  margin-left: -9px;
+}
+.table-header img{
+  width: 100%;
 }
 
+
 .table-information {
-  max-width: 56rem;
-  height: 38rem;;
-  margin: 4rem auto 0 auto;
-  border-radius: 2rem;
-  box-shadow: 0 0 4rem #cccccc;
+  width: 90%;
+  height: 380px;;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 0 48px #cccccc;
 }
 
 table {
-  margin-top: 8rem;
-  width: 100%;
-  max-width: 56rem;
+  margin-top: 60px;
+  width: 90%;
   position: absolute;
 }
 
@@ -221,9 +227,9 @@ tr {
 table td {
   color: #696767;
   text-align: center;
-  font-size: 2rem;
-  line-height: 5.25rem;
-  border-bottom: 0.1rem solid #e8e8e8;
+  font-size: 1.5em;
+  line-height: 63px;
+  border-bottom: 1px solid #e8e8e8;
 }
 
 table td:nth-child(5n) {
@@ -237,12 +243,15 @@ table td:nth-child(5n) {
 
 .jump_two {
   text-align: center;
-  padding: 5rem 0;
+  padding: 40px 0;
   animation: egg_two .7s linear infinite alternate;
   -ms-animation: egg_two .6s linear infinite alternate;
   -moz-animation: egg_two .6s linear infinite alternate;
   -webkit-animation: egg_two .6s linear infinite alternate;
   -o-animation: egg_two .6s linear infinite alternate;
+}
+.jump_two img {
+  width: 80%;
 }
 
 @keyframes  egg_two{
@@ -257,39 +266,37 @@ table td:nth-child(5n) {
 }
 
 .footer {
-  padding: 5rem 0;
-  margin-bottom: 2rem;
+  margin: 0 auto 36px auto;
 }
 .footer p {
-  font-size: 2rem;
+  font-size: 2em;
   text-align: center;
-  line-height: 3rem;
+  line-height: 36px;
 }
 
 .footer2 {
   background-color: #fff;
-  border-top: 0.1rem solid #ccc;
+  border-top: 1px solid #ccc;
   bottom: 0;
-  padding-top: 0.5rem;
+  padding-top: 6px;
   position: fixed;
   width: 100%;
-  max-width: 62.5rem;
 }
 
 .footer2 img{
-  width: 10rem;
-  height: 10rem;
+  width: 70px;
+  height: 70px;
   float: left;
-  margin-top: -0.5rem;
+  margin-top: -6px;
 }
 .footer2 .foot {
-  font-size: 2.5rem;
-  padding-top: 3rem;
+  font-size: 2em;
 }
 .footer2 button {
+  font-size: 1.25em;
   text-shadow: none;
-  border-radius: 0.5rem;
-  margin-left: 2rem;
+  border-radius: 6px;
+  margin-left: 24px;
   color: black;
 }
 
@@ -302,3 +309,32 @@ table td:nth-child(5n) {
   background: #c73133;
   color: #FFFFFF;
 }
+
+/*@media (min-width: 992px){*/
+  /*.dialog_message {*/
+    /*position: fixed;*/
+    /*z-index: 15;*/
+    /*width: 42%;*/
+    /*top: 63%;*/
+    /*border: 1px solid #ffe12e;*/
+    /*border-radius: 6px;*/
+    /*background: #c73133;*/
+  /*}*/
+  /*.dialog {*/
+    /*display: none;*/
+    /*position: fixed;*/
+    /*z-index: 3;*/
+    /*width: 70%;*/
+    /*min-height: 300px;*/
+    /*padding: 10px;*/
+    /*top: 5%;*/
+    /*left: 30%;*/
+  /*}*/
+
+  /*.dialog_message p, button {*/
+    /*text-align: center;*/
+    /*font-size: 2em;*/
+    /*padding: 6px;*/
+    /*color: #FFFFFF;*/
+  /*}*/
+/*}*/

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="maximum-scale=1,user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>炒短线牛人</title>
     <link rel="stylesheet" type="text/css" href="dialogs.css" />
 </head>
@@ -27,10 +27,10 @@
 </div>
 
 
-<div class="fixed" id="fixed_id">
-  <img src="picture/a1_07.png" class="close" onclick="closeFixed()">
-  <img src="picture/a1_11.png" id="fixed_pop" style="width: 180px">
-</div>
+  <div class="fixed" id="fixed_id">
+    <img src="picture/a1_07.png" class="close" onclick="closeFixed()">
+    <img src="picture/a1_11.png" id="fixed_pop" style="width: 100%;">
+  </div>
 
   <div class="shelter_class" id="shelter_close"></div>
 
@@ -39,8 +39,8 @@
     <img class="bing-wx" src="picture/bing-wx.png">
     <div class="dialog_message">
       <p>添加微信好礼送到手</p>
-      <button type="button" id="wx" class="wx_copy" onclick="copyText()">313213</button>
-      <p>↑点击微信号即可复制,或者<a class="wx_a" onclick="copyText()">点击按钮复制微信号</a>↑</p>
+      <button type="button" id="wx" class="wx_copy" onclick="copyText(false)">313213</button>
+      <p>↑点击微信号即可复制,或者<a class="wx_a" onclick="copyText(false)">点击按钮复制微信号</a>↑</p>
     </div>
   </div>
 
@@ -51,7 +51,8 @@
 
   <div class="table-information">
     <div class="table-header">
-      <img src="picture/c1_07.png"></div>
+      <img src="picture/c1_07.png">
+    </div>
     <table class="tab" cellspacing="0" cellpadding="0" border="0">
       <tbody>
         <tr>
@@ -110,7 +111,7 @@
       <img src="picture/1.gif">
       <div class="foot">
         &nbsp;微信:&nbsp; <strong id="article">110</strong>
-        <button type="button" id="footer-pop">点击复制微信</button>
+        <button type="button" onclick="copyText(true)">点击复制微信</button>
       </div>
     </div>
   </div>

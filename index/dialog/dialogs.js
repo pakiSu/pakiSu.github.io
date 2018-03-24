@@ -5,7 +5,6 @@ var shelterClose = document.getElementById('shelter_close'),
   openPop = document.getElementById('open_pop'),
   fixedPop  = document.getElementById('fixed_pop'),
   dialogPop = document.getElementById('dialog_pop'),
-  footerPop = document.getElementById('footer-pop'),
   jumpPop = document.getElementById('jump_pop');
 //define copy wx number variable
 var wxArray = ['110','111','112'];
@@ -14,7 +13,6 @@ var switchSecond = 5;
 var isFirst = false;
 var wxElement = document.getElementById('wx');
 var article = document.getElementById('article');
-var isFooter = false;
 
 var int = window.setInterval(wxSwitch,1000*switchSecond);
 
@@ -35,11 +33,6 @@ openPop.onclick = function () {
 
 jumpPop.onclick = function () {
   ShowHide(true,shelterClose,dialogPop);
-};
-
-footerPop.onclick = function () {
-  isFooter = true;
-  copyText();
 };
 
 //close dialog
@@ -69,7 +62,7 @@ function ShowHide(Boolean,item1,item2) {
 
 
 //this method order to copy current show wx number
-function copyText() {
+function copyText(isWx) {
   var textArea = document.createElement('textarea');
   textArea.style.top = 0;
   textArea.style.left = 0;
@@ -80,7 +73,7 @@ function copyText() {
   textArea.style.outline = 'none';
   textArea.style.boxShadow = 'none';
   textArea.style.background = 'transparent';
-  textArea.innerHTML = isFooter? article.innerHTML:wxElement.innerHTML;
+  textArea.innerHTML = isWx? article.innerHTML:wxElement.innerHTML;
   document.body.appendChild(textArea);
   textArea.select();
   try {
