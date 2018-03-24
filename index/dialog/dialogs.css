@@ -287,16 +287,7 @@ table td:nth-child(5n) {
   padding-top: 3rem;
 }
 .footer2 button {
-  text-rendering: auto;
-  color: initial;
-  letter-spacing: normal;
-  word-spacing: normal;
-  text-transform: none;
-  text-indent: 0;
-  text-shadow: none;
-  display: inline-block;
-  text-align: start;
-  margin: 0;
+  color: black;
 }
 
 .footer2 button:hover {
