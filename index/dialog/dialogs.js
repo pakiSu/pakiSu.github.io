@@ -24,9 +24,9 @@ window.onload = (function () {
 });
 
 //pop up dialog
-articlePop.onclick = function () {
-  copyText(true);
-};
+// articlePop.onclick = function () {
+//   copyText(true);
+// };
 
 
 fixedPop.onclick = function () {
