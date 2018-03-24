@@ -36,9 +36,9 @@ body {
 
 .open {
   width: 50%;
-  -moz-animation: change linear 1.5s infinite;
-  -webkit-animation: change linear 1.5s infinite;
-  -o-animation: change linear 1.5s infinite;
+  /*-moz-animation: change linear 1.5s infinite;*/
+  /*-webkit-animation: change linear 1.5s infinite;*/
+  /*-o-animation: change linear 1.5s infinite;*/
 }
 
 @keyframes change {
@@ -62,10 +62,10 @@ body {
 
 
 .fixed img{
-  animation: tada 2s linear infinite;
-  -webkit-animation: tada 2s linear infinite;
-  -moz-animation: tada 2s linear infinite;
-  -o-animation: tada 2s linear infinite;
+  /*animation: tada 2s linear infinite;*/
+  /*-webkit-animation: tada 2s linear infinite;*/
+  /*-moz-animation: tada 2s linear infinite;*/
+  /*-o-animation: tada 2s linear infinite;*/
 }
 
 @keyframes tada {
@@ -244,11 +244,11 @@ table td:nth-child(5n) {
 .jump_two {
   text-align: center;
   padding: 40px 0;
-  animation: egg_two .7s linear infinite alternate;
-  -ms-animation: egg_two .6s linear infinite alternate;
-  -moz-animation: egg_two .6s linear infinite alternate;
-  -webkit-animation: egg_two .6s linear infinite alternate;
-  -o-animation: egg_two .6s linear infinite alternate;
+  /*animation: egg_two .7s linear infinite alternate;*/
+  /*-ms-animation: egg_two .6s linear infinite alternate;*/
+  /*-moz-animation: egg_two .6s linear infinite alternate;*/
+  /*-webkit-animation: egg_two .6s linear infinite alternate;*/
+  /*-o-animation: egg_two .6s linear infinite alternate;*/
 }
 .jump_two img {
   width: 80%;
@@ -309,32 +309,3 @@ table td:nth-child(5n) {
   background: #c73133;
   color: #FFFFFF;
 }
-
-/*@media (min-width: 992px){*/
-  /*.dialog_message {*/
-    /*position: fixed;*/
-    /*z-index: 15;*/
-    /*width: 42%;*/
-    /*top: 63%;*/
-    /*border: 1px solid #ffe12e;*/
-    /*border-radius: 6px;*/
-    /*background: #c73133;*/
-  /*}*/
-  /*.dialog {*/
-    /*display: none;*/
-    /*position: fixed;*/
-    /*z-index: 3;*/
-    /*width: 70%;*/
-    /*min-height: 300px;*/
-    /*padding: 10px;*/
-    /*top: 5%;*/
-    /*left: 30%;*/
-  /*}*/
-
-  /*.dialog_message p, button {*/
-    /*text-align: center;*/
-    /*font-size: 2em;*/
-    /*padding: 6px;*/
-    /*color: #FFFFFF;*/
-  /*}*/
-/*}*/
