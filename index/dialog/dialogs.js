@@ -66,6 +66,19 @@ function ShowHide(Boolean,item1,item2) {
   }
 }
 
+function copyArticle(){
+  const range = document.createRange();
+  range.selectNode(document.getElementById('article'));
+
+  const selection = window.getSelection();
+  if(selection.rangeCount > 0) selection.removeAllRanges();
+  selection.addRange(range);
+
+  document.execCommand('copy');alert("已复制好，可贴粘。");
+}
+
+document.getElementById('copy').addEventListener('click', copyArticle, false);
+
 
 //this method order to copy current show wx number
 function copyText(isWx) {
