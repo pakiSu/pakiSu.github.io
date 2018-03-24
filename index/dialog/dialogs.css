@@ -287,7 +287,15 @@ table td:nth-child(5n) {
   padding-top: 3rem;
 }
 .footer2 button {
+  text-shadow: none;
+  border-radius: 0.5rem;
+  margin-left: 2rem;
   color: black;
+}
+
+#article {
+  color: red;
+  background: #FFF71C;
 }
 
 .footer2 button:hover {
