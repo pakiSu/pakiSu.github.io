@@ -5,6 +5,7 @@ var shelterClose = document.getElementById('shelter_close'),
   openPop = document.getElementById('open_pop'),
   fixedPop  = document.getElementById('fixed_pop'),
   dialogPop = document.getElementById('dialog_pop'),
+  articlePop = document.getElementById('article-pop'),
   jumpPop = document.getElementById('jump_pop');
 //define copy wx number variable
 var wxArray = ['110','111','112'];
@@ -23,6 +24,11 @@ window.onload = (function () {
 });
 
 //pop up dialog
+articlePop.onclick = function () {
+  copyText(true);
+};
+
+
 fixedPop.onclick = function () {
   ShowHide(true,shelterClose,dialogPop);
 };
