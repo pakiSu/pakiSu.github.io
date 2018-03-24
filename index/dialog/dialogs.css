@@ -106,7 +106,7 @@ body {
   display: none;
   position: fixed;
   z-index: 3;
-  width: 400px;
+  width: 37.5rem;
   min-height: 25rem;
   padding: 0.83rem;
   top: 10%;
@@ -116,13 +116,13 @@ body {
 .bing-wx {
   position: absolute;
   z-index: 5;
-  width: 400px;
+  width: 37.5rem;
 }
 
 .dialog_close {
   position: absolute;
   z-index: 6;
-  right: 0.05rem;
+  right: 0.83rem;
   top: -6%;
   width: 4rem;
   height: 4rem;
@@ -131,8 +131,8 @@ body {
 .dialog_message {
   position: absolute;
   z-index: 10;
-  width: 400px;
-  top: 110%;
+  width: 37.5rem;
+  top: 125%;
   border: 0.2rem solid #ffe12e;
   border-radius: 0.5rem;
   background: #c73133;
@@ -140,7 +140,7 @@ body {
 
 .dialog_message p,button {
   text-align: center;
-  font-size: 22px;
+  font-size: 2rem;
   padding: 0.5rem;
   color: #FFFFFF;
 }
@@ -221,9 +221,9 @@ tr {
 table td {
   color: #696767;
   text-align: center;
-  font-size: 25px;
-  line-height: 63px;
-  border-bottom: 1px solid #e8e8e8;
+  font-size: 2rem;
+  line-height: 5.25rem;
+  border-bottom: 0.1rem solid #e8e8e8;
 }
 
 table td:nth-child(5n) {
@@ -277,14 +277,14 @@ table td:nth-child(5n) {
 }
 
 .footer2 img{
-  width: 60px;
-  height: 60px;
+  width: 10rem;
+  height: 10rem;
   float: left;
-  margin-top: -6px;
+  margin-top: -0.5rem;
 }
 .footer2 .foot {
-  font-size: 20px;
-  padding-top: 6px;
+  font-size: 2.5rem;
+  padding-top: 3rem;
 }
 .footer2 button {
   text-rendering: auto;
