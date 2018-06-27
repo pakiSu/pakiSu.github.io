@@ -20,6 +20,19 @@ window.onload = (function () {
   }
 });
 
+
+function toggle(isCopy) {
+  var div = document.getElementById("show");
+  if (div.style.display == "block") {
+    div.style.display = "none";
+  } else {
+    div.style.display = "block";
+  }
+  if(isCopy) {
+    copyArticle('article');
+  }
+}
+
 function copyArticle(id){
   const range = document.createRange();
   range.selectNode(document.getElementById(id));
@@ -51,34 +64,3 @@ function wxSwitch() {
 window.onbeforeunload= (function(e){
   clearInterval(int);
 });
-
-$(document).click(function(){
-  $("#wechat").hide();
-});
-$("#wechat").click(function(event){
-  event.stopPropagation();
-});
-
-function closeP() {
-
-  var wx = document.getElementById("wechat");
-
-  var wxb = document.getElementById("wechatBox");
-
-  wx.style.display = "none";
-
-  wxb.style.display = "none";
-
-}
-
-function popup() {
-
-  var wx = document.getElementById("wechat");
-
-  var wxb = document.getElementById("wechatBox");
-
-  wx.style.display = "block";
-
-  wxb.style.display = "block";
-
-}
