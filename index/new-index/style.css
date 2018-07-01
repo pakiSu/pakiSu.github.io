@@ -458,3 +458,31 @@ i, em {
   margin: 24px auto;
   padding: 0 18px;
 }
+
+.btcode {
+  width: 100%;
+  background: #0553F8;
+  color: #FFF;
+  font-size: 1.2em;
+  line-height: 1.8em;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  font-weight:bold;
+}
+
+.btcode1 {
+  position:relative;
+  top:8px
+}
+.wx-png {
+  position: fixed;
+  z-index: 10;
+  top: 33%;
+  right: 0;
+  cursor: pointer;
+}
+.wx-png img {
+  width: 100px;
+  height: 100px;
+}

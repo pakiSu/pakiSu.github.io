@@ -5,13 +5,17 @@
   <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
   <meta name="viewport" content="width=750, user-scalable=yes, target-densitydpi=device-dpi">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style_index.css">
 </head>
 <body>
-<div class="zhou1">
-  <img src="index_files/wx.png">
-  <p>扫描二维码<br>或点击微信号复制<br>
-  <i class="vsd_w" id="wx" onclick="copyArticle('wx')"></i></p>
-</div>
+<!--<div class="zhou1">-->
+  <!--<img src="index_files/wx.png">-->
+  <!--<p>扫描二维码<br>或点击微信号复制<br>-->
+  <!--<i class="vsd_w" id="wx" onclick="copyArticle('wx')"></i></p>-->
+<!--</div>-->
+
+<div class="wx-png" onclick="popup()"><img src="index_files/wxa.gif"></div>
+
 <div class="maxBox">
 
   <div class="All_Whole">
@@ -56,9 +60,34 @@
       <i class="wxNum" id="wx2" onclick="copyArticle('wx2')"></i>
     </p>
     <img src="index_files/p12.jpg">
-    <div class="text-center">版权所有: 吉林市城光文旅投资有限公司</div>
+    <div class="text-center">版权所有: 吉林市城光文旅投资有限公司<br><br><br><br><br></div>
   </div>
 </div>
+
+<div class="btcode">
+  <img src="index_files/wechat.png" alt="weixin" width="43" height="43" class="btcode1">
+  微信号 <span onclick="copyArticle('article')" id="article" style="font-size: 16pt"></span>
+  <strong id="wechat12" style="padding: 4px 10px;background: #f5fb01;border-radius: 8px;color: #d32a63;">
+    <a href="javascript:popup()">
+      <span style="max-width: 100%; color: rgb(255, 41, 65); box-sizing: border-box !important; word-wrap: break-word !important; background-color: rgb(255, 251, 0);">
+        <b>点击加好友</b>
+      </span>
+    </a>
+  </strong>
+  <div style="margin-top:-3px;font-size: 12pt;">想赚钱的赶紧添加好友咨询赚钱方法</div>
+</div>
+
+<div class="wechatBox" id="wechatBox" onclick="closeP()"></div>
+<div class="wechat" id="wechat">
+  <p class="p1" style="margin-top:8px">长按微信号复制</p>
+  <p class="wxid" id="wx" onclick="copyArticle('wx')">123213</p>
+  <p class="p2" style="margin-top:20px;height:44px;">
+    <a href="javascript:window.location.href='weixin://'">
+      <font color="#ff0000">打开微信</font>
+    </a>
+  </p>
+</div>
+
 <script type="text/javascript" src="copy.js"></script>
 </body>
 </html>

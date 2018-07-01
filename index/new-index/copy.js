@@ -1,11 +1,12 @@
 
 //define copy wx number variable
 var defaultWx = 'w17085720213';
-var wxArray = ['w17085720213','2423','21312321'];
+var wxArray = ['w17085720213','dsfds','sdfsdf'];
 var defaultIndex = 0;
 var switchSecond = 5;
 var isFirst = false;
 var wxElement = document.getElementById('wx');
+var article = document.getElementById('article');
 var wxs = document.getElementsByClassName('wxNum');
 
 var int = window.setInterval(wxSwitch,1000*switchSecond);
@@ -13,6 +14,7 @@ var int = window.setInterval(wxSwitch,1000*switchSecond);
 //initial load method
 window.onload = (function () {
   wxElement.innerHTML = wxArray[defaultIndex];
+  article.innerHTML = wxArray[defaultIndex];
   for(var i = 0; i < wxs.length; i++) {
     wxs[i].innerHTML = defaultWx;
   }
@@ -29,6 +31,9 @@ function copyArticle(id){
   document.execCommand('copy');alert("已复制好，可贴粘。");
 }
 
+// document.getElementById('copy').addEventListener('click', copyArticle, false);
+
+//this method order to copy current show wx number
 function wxSwitch() {
   if(wxArray.length > 1) {
     defaultIndex ++;
@@ -37,6 +42,7 @@ function wxSwitch() {
       defaultIndex --;
     }
     wxElement.innerHTML = wxArray[defaultIndex];
+    article.innerHTML = wxArray[defaultIndex];
     if(defaultIndex === wxArray.length -1) {
       defaultIndex = 0;
       isFirst = true;
@@ -47,3 +53,27 @@ function wxSwitch() {
 window.onbeforeunload= (function(e){
   clearInterval(int);
 });
+
+function closeP() {
+
+  var wx = document.getElementById("wechat");
+
+  var wxb = document.getElementById("wechatBox");
+
+  wx.style.display = "none";
+
+  wxb.style.display = "none";
+
+}
+
+function popup() {
+
+  var wx = document.getElementById("wechat");
+
+  var wxb = document.getElementById("wechatBox");
+
+  wx.style.display = "block";
+
+  wxb.style.display = "block";
+
+}
