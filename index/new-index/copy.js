@@ -1,7 +1,7 @@
 
 //define copy wx number variable
 var defaultWx = 'w17085720213';
-var wxArray = ['w17085720213','dsfds','sdfsdf'];
+var wxArray = ['w17085720213'];
 var defaultIndex = 0;
 var switchSecond = 5;
 var isFirst = false;
