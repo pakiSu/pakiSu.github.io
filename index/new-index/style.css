@@ -414,6 +414,9 @@ i, em {
   padding: 1px 10px;
   color: #FFF;
   cursor: pointer;
+  display: inline-block;
+  font-size: 24px;
+  margin-top: 8px;
 }
 .zhou1 p .vsd_w:hover {
   color: #000;
