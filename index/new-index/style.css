@@ -411,12 +411,12 @@ i, em {
 
 .zhou1 p .vsd_w {
   background: #F00;
-  padding: 1px 10px;
   color: #FFF;
   cursor: pointer;
   display: inline-block;
-  font-size: 24px;
+  font-size: 30px;
   margin-top: 8px;
+  padding: 8px;
 }
 .zhou1 p .vsd_w:hover {
   color: #000;
@@ -444,6 +444,9 @@ i, em {
 .tudkg i {
   color: #000;
   cursor: pointer;
+  font-size: 30px;
+  display: inline-block;
+  padding: 8px;
 }
 .tudkg i:hover {
   color: #fff;
