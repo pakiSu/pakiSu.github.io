@@ -495,10 +495,14 @@ i, em {
 }
 .sub-header {
   font-size: 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #888;
+  margin-right: 16px;
 }
 .sub-header img {
+  height: 30px;
   float: right;
-  width: 250px;
+  width: 200px;
 }
 .margin-left-32 {
   margin-left: 32px;
@@ -507,3 +511,6 @@ i, em {
   padding-left: 8px;
 }
 
+.color {
+  color: #888;
+}
