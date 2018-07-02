@@ -486,3 +486,24 @@ i, em {
   width: 100px;
   height: 100px;
 }
+
+.header-title {
+  color: red;
+  font-weight: 500;
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+.sub-header {
+  font-size: 16px;
+}
+.sub-header img {
+  float: right;
+  width: 250px;
+}
+.margin-left-32 {
+  margin-left: 32px;
+}
+.padding-left-8 {
+  padding-left: 8px;
+}
+
